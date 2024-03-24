@@ -1,18 +1,18 @@
 plugins {
-    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinAndroid)
+    kotlin("kapt")
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.serialization)
+    alias(libs.plugins.realm)
 }
 
 android {
-    namespace = "pl.kkapps.koleoapp.data"
+    namespace = "pl.kkapps.railways.data"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "pl.kkapps.koleoapp.data"
-        minSdk = 26
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = 28
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -33,14 +33,37 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+//    packaging {
+//        resources {
+//            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+//        }
+//    }
 }
 
 dependencies {
 
+    implementation(project(":domain"))
+
+    kapt(libs.hiltCompiler)
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
-    implementation(libs.material)
+    implementation(libs.hiltAndroid)
+    implementation(libs.bundles.coroutines)
+    implementation(libs.retrofit)
+    implementation(libs.jsonSerialization)
+    implementation(libs.serializationConverter)
+    implementation(libs.bundles.okhttp)
+
+    kaptTest(libs.hiltCompiler)
     testImplementation(libs.junit)
+    testImplementation(libs.coroutinesTest)
+    testImplementation(libs.hiltAndroidTesting)
+
+    kaptAndroidTest(libs.hiltAndroidCompiler)
     androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
+    androidTestImplementation(libs.hiltAndroidTesting)
+}
+
+kapt {
+    correctErrorTypes = true
 }

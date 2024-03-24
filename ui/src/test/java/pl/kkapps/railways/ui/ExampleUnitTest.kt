@@ -1,4 +1,4 @@
-package pl.kkapps.koleoapp.ui
+package pl.kkapps.railways.ui
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package pl.kkapps.koleoapp.data
+package pl.kkapps.railways.domain
 
 import org.junit.Test
 

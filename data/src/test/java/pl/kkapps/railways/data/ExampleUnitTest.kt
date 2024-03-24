@@ -1,4 +1,4 @@
-package pl.kkapps.koleoapp
+package pl.kkapps.railways.data
 
 import org.junit.Test
 

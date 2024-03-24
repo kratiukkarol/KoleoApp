@@ -1,4 +1,4 @@
-package pl.kkapps.koleoapp.ui.theme
+package pl.kkapps.railways.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

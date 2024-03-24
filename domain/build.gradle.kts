@@ -1,8 +1,15 @@
 plugins {
     kotlin("jvm")
+    kotlin("kapt")
 }
 
 dependencies {
 
-    testImplementation(kotlin("test"))
+    kapt(libs.hiltCompiler)
+    implementation(libs.hiltCore)
+    implementation(libs.bundles.coroutines)
+
+    kaptTest(libs.hiltCompiler)
+    testImplementation(libs.junit)
+    testImplementation(libs.coroutinesTest)
 }

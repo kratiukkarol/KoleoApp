@@ -2,6 +2,7 @@ pluginManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://storage.googleapis.com/r8-releases/raw") }
         gradlePluginPortal()
     }
 }
@@ -13,7 +14,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "KoleoApp"
+rootProject.name = "railways"
 include(":app")
 include(":data")
 include(":domain")
