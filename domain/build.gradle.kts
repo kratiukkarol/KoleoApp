@@ -12,4 +12,5 @@ dependencies {
     kaptTest(libs.hiltCompiler)
     testImplementation(libs.junit)
     testImplementation(libs.coroutinesTest)
+    testImplementation(libs.bundles.test)
 }
