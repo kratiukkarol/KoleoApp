@@ -4,8 +4,9 @@ plugins {
     kotlin("kapt")
     alias(libs.plugins.hilt)
     alias(libs.plugins.serialization)
-    alias(libs.plugins.realm)
 }
+
+apply(plugin = "realm-android")
 
 android {
     namespace = "pl.kkapps.railways.data"
@@ -33,11 +34,6 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-//    packaging {
-//        resources {
-//            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-//        }
-//    }
 }
 
 dependencies {
@@ -50,6 +46,7 @@ dependencies {
     implementation(libs.hiltAndroid)
     implementation(libs.bundles.coroutines)
     implementation(libs.retrofit)
+    implementation(libs.converterGson)
     implementation(libs.jsonSerialization)
     implementation(libs.serializationConverter)
     implementation(libs.bundles.okhttp)
