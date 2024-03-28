@@ -1,4 +1,4 @@
-package pl.kkapps.railways.ui.hilt
+package pl.kkapps.railways.ui.home.hilt
 
 import com.airbnb.mvrx.hilt.AssistedViewModelFactory
 import com.airbnb.mvrx.hilt.MavericksViewModelComponent
@@ -7,7 +7,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.multibindings.IntoMap
-import pl.kkapps.railways.ui.AppScreenViewModel
+import pl.kkapps.railways.ui.home.AppScreenViewModel
 
 @Module
 @InstallIn(MavericksViewModelComponent::class)
