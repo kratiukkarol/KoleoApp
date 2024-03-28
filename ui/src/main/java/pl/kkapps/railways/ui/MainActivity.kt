@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material3.Surface
 import dagger.hilt.android.AndroidEntryPoint
+import pl.kkapps.railways.ui.home.AppScreen
 import pl.kkapps.railways.ui.theme.AppTheme
 
 @AndroidEntryPoint
