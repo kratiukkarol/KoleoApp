@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">railways</string>
+    <string name="search_icon">Ikona wyszukiwania</string>
+    <string name="choose_station">Wybierz stację</string>
+    <string name="close_icon">Ikona zamykania</string>
+    <string name="search_hint">Szukaj…</string>
+    <string name="station_row_title">"Stacja: "</string>
+    <string name="distance_info">Odległość: %1$s km</string>
+    <string name="headline">WYBIERZ STACJE</string>
 </resources>
